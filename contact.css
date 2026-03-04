@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: 
+        linear-gradient(rgba(80, 0, 0, 0.75), rgba(80, 0, 0, 0.5)),
+        url("background-garden.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+    font-family: Poppins, sans-serif;
+	color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(79, 8, 17, 0.7);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    color: white;
+    padding: 10px 30px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+}
+
+nav ul li a.active {
+    color: white;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #2c3e50;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+/* Developer Section */
+.developer-section {
+    padding: 60px 10%;
+    background-color: rgba(79, 8, 17, 0.7);
+}
+
+.dev-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+	margin-bottom: 40px;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.dev-info {
+    flex: 1;
+}
+
+.dev-info h2 {
+    background-color: #ccc;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+	color: rgb(79, 8, 17);
+}
+
+.dev-info p {
+    margin: 8px 0;
+}
+
+.extra-info {
+    width: 300px;
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 20px;
+    padding: 20px;
+	color: rgb(79, 8, 17);
+}
+
+.contact-section {
+    background-color: rgba(50, 8, 17, 0.7);
+    padding: 60px 10%;
+}
+
+.contact-form {
+    max-width: 400px;
+}
+
+.contact-form h2 {
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .dev-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .extra-info {
+        width: 100%;
+    }
+}

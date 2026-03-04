@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: 
+        linear-gradient(rgba(80, 0, 0, 0.75), rgba(80, 0, 0, 0.5)),
+        url("background-garden.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+    font-family: Poppins, sans-serif;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+	font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+	font-size: 35px;
+    text-shadow: 0 0 10px rgba(255, 100, 100, 0.6);
+}
+
+p {
+	font-size: 15px;
+	line-height: 1.8;
+}
+
+.choice-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background-color: rgba(79, 8, 17, 0.7);
+    border: 2px solid #999;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    gap: 20px;
+    margin: 50px auto;
+}
+
+.choice-container h1 {
+    margin-bottom: 10px;
+}
+
+.choice-container button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.choice-container button:hover {
+    background: #e0e0e0;
+}
